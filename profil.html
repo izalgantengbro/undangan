@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mempelai</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Xb7P0yU69QcoU88lIbi4ecGVi+5e62/3N/vkFhjItb9+G7IQG2qGYZi17WWY9Rb6KCrdbKfNkftXNv/yu3kW5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts - Poppins and Dancing Script -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .card-title {
+            font-size: 2.5rem;
+            color: #6c757d;
+        }
+
+        .card-text {
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+
+        .latin-font {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: #6c757d;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .btn-back {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <audio id="background-music" loop>
+        <source src="assets/audio/drunk.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="container my-5">
+        <div class="card">
+            <div class="card-body text-center">
+                <h1 class="card-title">Profil Mempelai</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="assets/img/a.jpg" class="img-fluid mb-4" alt="Foto Anto">
+                        <h2 class="latin-font">Anto</h2>
+                        <p class="card-text">Anto adalah seorang yang penuh semangat dan pekerja keras. Ia sangat mencintai seni dan musik. Dalam kesehariannya, Anto bekerja sebagai seorang desainer grafis di sebuah perusahaan ternama.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="assets/img/d.png" class="img-fluid mb-4" alt="Foto Meidina">
+                        <h2 class="latin-font">Meidina</h2>
+                        <p class="card-text">Meidina adalah seorang wanita yang lembut dan penuh kasih sayang. Ia sangat menyukai kegiatan sosial dan sering terlibat dalam berbagai aktivitas kemanusiaan. Meidina bekerja sebagai guru di sebuah sekolah dasar.</p>
+                    </div>
+                </div>
+                <hr>
+                <a href="undangan.html" class="btn btn-outline-primary btn-back">
+                    <i class="fas fa-arrow-left"></i> Kembali ke Undangan
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('background-music');
+            audio.play().catch(function(error) {
+                console.log('Background music play was prevented by the browser:', error);
+            });
+        });
+    </script>
+</body>
+</html>

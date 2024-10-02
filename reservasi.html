@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservasi Pernikahan</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa; /* Warna latar belakang */
+            font-family: 'Poppins', sans-serif; /* Font family */
+            color: #495057; /* Warna teks */
+        }
+        .card {
+            background-color: #f8f9fa; /* Warna latar belakang card */
+            border: none;
+            border-radius: 15px; /* Sudut membulat */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+            margin: 50px auto; /* Tengah secara horizontal dan vertikal */
+            padding: 30px; /* Padding dalam card */
+            width: 80%; /* Lebar card */
+            max-width: 600px; /* Lebar maksimal card */
+        }
+        .card-title {
+            font-size: 2rem; /* Ukuran font judul card */
+            color: #343a40; /* Warna judul card */
+            margin-bottom: 20px; /* Jarak bawah judul card */
+        }
+        .form-control {
+            border-radius: 10px; /* Sudut membulat input field */
+        }
+        .btn-primary {
+            background-color: #6c5ce7; /* Warna latar belakang tombol ungu */
+            border-color: #6c5ce7; /* Warna border tombol ungu */
+        }
+        .btn-primary:hover {
+            background-color: #4834d4; /* Warna latar belakang tombol ungu hover */
+            border-color: #4834d4; /* Warna border tombol ungu hover */
+        }
+        .btn-secondary {
+            background-color: #20bf6b; /* Warna latar belakang tombol hijau */
+            border-color: #20bf6b; /* Warna border tombol hijau */
+        }
+        .btn-secondary:hover {
+            background-color: #0b8457; /* Warna latar belakang tombol hijau hover */
+            border-color: #0b8457; /* Warna border tombol hijau hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Audio Backsound -->
+    <audio autoplay loop>
+        <source src="assets/audio/mahjong.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <img src="assets/img/in.png" alt="Gambar Reservasi" style="max-width: 300px; display: block; margin: 0 auto 20px;">
+                <h1 class="card-title text-center">Formulir Reservasi</h1>
+                <form action="submit_reservation.php" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Alamat</label>
+                        <input type="text" class="form-control" id="address" name="address" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Nomor Telepon</label>
+                        <input type="text" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="date" class="form-label">Tanggal</label>
+                            <input type="date" class="form-control" id="date" name="date" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="time" class="form-label">Jam</label>
+                            <input type="time" class="form-control" id="time" name="time" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="attendance" class="form-label">Kehadiran</label>
+                        <select class="form-control" id="attendance" name="attendance" required>
+                            <option value="Hadir">Hadir</option>
+                            <option value="Tidak Hadir">Tidak Hadir</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Ucapan Selamat</label>
+                        <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <a href="undangan.html" class="btn btn-secondary me-2">Kembali</a>
+                        <button type="submit" class="btn btn-primary">Kirim</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

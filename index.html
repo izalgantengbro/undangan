@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #4F3C78;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .welcome-card {
+            background-color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .welcome-card img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .welcome-title {
+            font-size: 3.0rem;
+            color: #6c757d;
+            margin-bottom: 50px;
+            font-family: Mistral, Helvetica, sans-serif;
+        }
+
+        .welcome-card p {
+        }
+
+        .welcome-button,
+        .admin-button {
+            font-size: 1.3rem;
+            color: #ffffff;
+            background-color: #4F3C78;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin: 5px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .welcome-button:hover,
+        .admin-button:hover {
+            background-color: #4400ff;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .welcome-card {
+                padding: 20px;
+            }
+            .welcome-title {
+                font-size: 2rem;
+            }
+            .welcome-button,
+            .admin-button {
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .welcome-title {
+                font-size: 1.5rem;
+            }
+            .welcome-card img {
+                max-width: 150px;
+            }
+            .welcome-button,
+            .admin-button {
+                font-size: 0.9rem;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Audio Backsound -->
+    <audio autoplay loop>
+        <source src="assets/audio/apake.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="welcome-card" id="welcomeCard">
+        <img src="assets/img/indexx.png" alt="Gambar Selamat Datang">
+        <h1 class="welcome-title">Selamat Datang</h1>
+        <p>Kami mengundang Anda untuk menghadiri acara pernikahan kami.</p>
+        <button class="welcome-button" id="openInvitationButton">
+            <i class="fas fa-envelope"></i> Tamu Undangan
+        </button>
+        <button class="admin-button" id="adminButton">
+            <i class="fas fa-user-shield"></i> Admin
+        </button>
+    </div>
+
+    <script>
+        document.getElementById('openInvitationButton').addEventListener('click', function() {
+            const welcomeCard = document.getElementById('welcomeCard');
+            welcomeCard.classList.add('fade-out');
+            setTimeout(function() {
+                window.location.href = 'undangan.html';
+            }, 1000);
+        });
+
+        document.getElementById('adminButton').addEventListener('click', function() {
+            const username = prompt("Masukkan Username:");
+            const password = prompt("Masukkan Password:");
+            if (username === "admin" && password === "unpam") {
+                window.location.href = 'admin.php';
+            } else {
+                alert("Username atau Password salah.");
+            }
+        });
+    </script>
+</body>
+</html>

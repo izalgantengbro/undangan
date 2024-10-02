@@ -1,0 +1,44 @@
+/* Custom CSS for additional styling */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 2.5rem;
+    color: #6c757d;
+}
+
+.card-text {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+.contact-info p,
+.donation-info p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.contact-info a,
+.donation-info a {
+    margin: 0 5px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
